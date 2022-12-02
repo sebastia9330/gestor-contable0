@@ -1,7 +1,11 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+//modules
 import { AppRoutingModule } from './app-routing.module';
+import { FormsModule } from '@angular/forms';
+
+//componentes
 import { AppComponent } from './app.component';
 import { GastosComponent } from './componentes/gastos/gastos.component';
 import { IngresosComponent } from './componentes/ingresos/ingresos.component';
@@ -10,6 +14,7 @@ import { IngresarGastoComponent } from './componentes/gastos/ingresar-gasto/ingr
 import { ListarGastoComponent } from './componentes/gastos/listar-gasto/listar-gasto.component';
 import { IngresarIngresoComponent } from './componentes/ingresos/ingresar-ingreso/ingresar-ingreso.component';
 import { ListarIngresoComponent } from './componentes/ingresos/listar-ingreso/listar-ingreso.component';
+
 
 @NgModule({
   declarations: [
@@ -24,7 +29,8 @@ import { ListarIngresoComponent } from './componentes/ingresos/listar-ingreso/li
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
