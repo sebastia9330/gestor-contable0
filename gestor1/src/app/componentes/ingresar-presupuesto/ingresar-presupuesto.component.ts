@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { PresupuestoService } from 'src/app/services/presupuesto.service';
 
@@ -7,7 +7,7 @@ import { PresupuestoService } from 'src/app/services/presupuesto.service';
   templateUrl: './ingresar-presupuesto.component.html',
   styleUrls: ['./ingresar-presupuesto.component.css']
 })
-export class IngresarPresupuestoComponent  {
+export class IngresarPresupuestoComponent implements OnInit  {
 cantidad: number;
 cantidadIncorrecta: boolean;
 
@@ -51,5 +51,6 @@ gasto(){
     this.cantidadIncorrecta = true;
   }
 }
+
 
 }
