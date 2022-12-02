@@ -1,1 +1,15 @@
-<p>ingresar-ingreso works!</p>
+<h4 class="text-center">Ingresar Ingreso</h4>
+<hr>
+<div *ngIf="formularioIncorrecto" class="text-center">
+    <span class="badge bg-danger">{{  textIncorrecto | uppercase}}</span>
+</div>
+<div class="form-group mt-4">
+    <label for="ingreso">Ingreso</label>
+    <input type="text" id="ingreso" [(ngModel)]="nombreIngreso" class="form-control form-control-lg" placeholder="Ej: Comida...">
+  </div>
+  <div class="form-group mt-4">
+    <label for="cantidad">Cantidad</label>
+    <input type="number" id="cantidad" [(ngModel)]="cantidad" class="form-control form-control-lg" placeholder="Ingrese Cantidad">
+  </div>
+  <button class="btn btn-secondary btn-lg btn-block mt-2" (click)="agregarIngreso()">Ingresar Ingreso</button>
+ 
