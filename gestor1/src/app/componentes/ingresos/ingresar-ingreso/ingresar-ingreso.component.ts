@@ -31,7 +31,8 @@ export class IngresarIngresoComponent implements OnInit {
           cantidad: this.cantidad,
         }
         //evio del objeto via sunbjet
-        this._presupuestoService.agregarGasto(INGRESO);
+        this._presupuestoService.agregarIngreso(INGRESO);
+        //reset formulario
         this.formularioIncorrecto = false;
         this.nombreIngreso = '';
         this.cantidad = 0;

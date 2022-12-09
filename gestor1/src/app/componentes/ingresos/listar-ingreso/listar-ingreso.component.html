@@ -1,1 +1,24 @@
-<p>listar-ingreso works!</p>
+<h4 class="text-canter">Listado de Ingresos</h4>
+<hr>
+<div class="row" style="margin-top: 40px">
+    <div class="col-lg-6">
+        <div class="alert alert-success sizeAlert">
+            Presupuesto <strong>${{ presupuesto }}</strong>
+        </div>
+    </div>
+    <div class="col-lg-6">
+        <div class="alert alert-secondary sizeAlert">
+            restante <strong>${{ restante }}</strong>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-12">
+        <ul class="list-group list-group-flush">
+            <li *ngfor="let ingreso of listaIngreso">
+                <strong>{{ ingreso.nombre }}</strong>
+                <strong>${{ ingreso.cantidad }}</strong>
+            </li>
+        </ul>
+    </div>
+</div>
